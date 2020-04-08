@@ -27,3 +27,9 @@ color: #0072b1;
 .faInstagram:hover{
 color: #C13584;
 }
+
+  
+.texto{
+  letter-spacing: .2rem;
+  font-size: 16pt;
+}
