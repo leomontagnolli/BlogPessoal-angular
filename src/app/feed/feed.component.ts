@@ -9,9 +9,13 @@ import { Postagem } from '../model/Postagem';
 })
 export class FeedComponent implements OnInit {
 
-  listaPostagens: Postagem []
+  key = 'data';
+  reverse = true;
 
-  postagem: Postagem = new Postagem
+
+  listaPostagens: Postagem [];
+
+  postagem: Postagem = new Postagem;
 
   constructor(private postagemService: PostagemService) { }
 
