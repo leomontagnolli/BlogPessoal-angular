@@ -13,6 +13,9 @@ export class PostagemService {
   getAllPostanges(){
     return this.Http.get('http://31.220.57.14:8080/postagens');
   }
+  findByTitulo(titulo: string) {
+    return this.Http.get(`http://31.220.57.14:8080/postagens/titulo/${titulo}`)
+  }
 
   postPostagens(postagem: Postagem){
     return this.Http.post('http://31.220.57.14:8080/postagens', postagem)

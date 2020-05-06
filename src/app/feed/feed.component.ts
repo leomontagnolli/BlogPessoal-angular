@@ -19,6 +19,8 @@ export class FeedComponent implements OnInit {
 
   alerta:boolean = false;
 
+  titulo:string;
+
   constructor(private postagemService: PostagemService) { }
 
   ngOnInit()  {
@@ -55,4 +57,13 @@ export class FeedComponent implements OnInit {
       location.assign('/feed');
     })
   }
+
+pesquisarPorTitulo(){
+  this.postagemService.findByTitulo(this.titulo).subscribe((resp: Postagem[]) =>{
+    this.listaPostagens = resp;
+
+  })
+}
+
+
 }
